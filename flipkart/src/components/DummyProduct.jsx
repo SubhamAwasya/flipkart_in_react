@@ -5,7 +5,7 @@ function DummyProduct({ product }) {
   return (
     <Link
       to={`/show-product/${1}`}
-      className="card w-full min-w-64 max-w-80 bg-base-100 mx-auto shadow-xl shadow-base-300"
+      className="card w-full min-w-64 max-w-80 bg-base-100 mx-auto shadow-xl shadow-base-300 border-[1px] border-base-content border-opacity-30"
     >
       <figure>
         <img className="aspect-square " src={product.thumbnail} alt="Shoes" />

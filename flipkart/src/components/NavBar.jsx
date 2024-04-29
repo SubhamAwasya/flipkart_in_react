@@ -1,5 +1,4 @@
-import Theme from "./mini-comp/Theme";
-import NavCenter from "./mini-comp/nav-comp/NavCenter";
+import SearchInput from "./mini-comp/SearchInput";
 import NavLeft from "./mini-comp/nav-comp/NavLeft";
 import NavRight from "./mini-comp/nav-comp/NavRight";
 
@@ -9,8 +8,8 @@ function NavBar() {
       <div className="navbar-start ">
         <NavLeft />
       </div>
-      <div className="navbar-center lg:flex">
-        <NavCenter />
+      <div className="navbar-center lg:flex max-md:hidden">
+        <SearchInput />
       </div>
       <div className="navbar-end">
         <NavRight />

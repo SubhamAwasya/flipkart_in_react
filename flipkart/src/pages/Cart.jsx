@@ -3,8 +3,8 @@ import CartProduct from "../components/mini-comp/cart-comp/CartProduct";
 
 function Cart() {
   return (
-    <div className="flex justify-center max-sm:items-center max-md:flex-col-reverse max-sm:m-0 px-10">
-      <div className="flex flex-col items-center w-full h-3/5 mx-auto max-sm:m-0">
+    <div className="flex max-sm:items-center max-md:flex-col-reverse max-sm:m-0 md:px-10 px-4">
+      <div className="flex flex-col w-full">
         <CartProduct />
         <CartProduct />
         <CartProduct />

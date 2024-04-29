@@ -7,8 +7,11 @@ function Skeleton() {
   ];
   return (
     <Grid>
-      {pro.map((item) => (
-        <div className="flex flex-col gap-4 mx-auto w-full min-w-64 max-w-80">
+      {pro.map((item, index) => (
+        <div
+          key={index}
+          className="flex flex-col gap-4 mx-auto w-full min-w-64 max-w-80"
+        >
           <div className="skeleton h-[256px] w-full aspect-square"></div>
           <div className="skeleton h-4 w-28"></div>
           <div className="skeleton h-4 w-full"></div>

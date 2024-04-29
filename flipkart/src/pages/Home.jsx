@@ -1,9 +1,13 @@
+import { useEffect, useState } from "react";
+
+// my
 import HomeCategory from "../components/mini-comp/HomeCategory";
 import Product from "../components/Product";
 import DummyProduct from "../components/DummyProduct";
 import Skeleton from "../components/mini-comp/Skeleton";
 import Grid from "../components/mini-comp/Grid";
-import { useEffect, useState } from "react";
+import Pagination from "../components/mini-comp/Pagination";
+import SearchInput from "../components/mini-comp/SearchInput";
 
 function Home() {
   const pro = [
@@ -17,12 +21,14 @@ function Home() {
       .then((res) => res.json())
       .then((res) => {
         setProducts(res.products);
-        console.log(res.products);
       });
   }, []);
 
   return (
     <>
+      <div className="md:hidden my-3 max-md:mx-3">
+        <SearchInput />
+      </div>
       <HomeCategory />
       {products.length === 0 && <Skeleton />}
       <Grid>
@@ -30,6 +36,7 @@ function Home() {
           <DummyProduct key={index} product={product} />
         ))}
       </Grid>
+      <Pagination />
     </>
   );
 }

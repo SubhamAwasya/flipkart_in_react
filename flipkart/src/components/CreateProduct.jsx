@@ -1,38 +1,33 @@
-import React from "react";
+import { ProductCategory } from "../constant/Category.js";
 
-function CreateProduct({
-  handleSubmit,
-  handleChange,
-  formData,
-  ProductCategory,
-}) {
+function CreateProduct({ handleSubmit }) {
   return (
     <div className="collapse bg-base-200">
       <input type="checkbox" />
-      <div className="collapse-title text-xl font-medium">Add New Product</div>
+      <div className="collapse-title text-xl font-medium">
+        + Add New Product
+      </div>
       <div className="collapse-content">
         <form onSubmit={handleSubmit} className="flex flex-col gap-4 mb-6">
           <input
             type="text"
             name="name"
+            required
             placeholder="Product Name"
-            value={formData.name}
-            onChange={handleChange}
             className="input input-bordered w-full "
           />
 
           <input
             type="number"
             name="price"
+            required
             placeholder="Product Price"
-            value={formData.price}
-            onChange={handleChange}
             className="input input-bordered w-full "
           />
 
           <select
             className="select select-bordered w-full"
-            onChange={handleChange}
+            required
             name="category"
             id="category"
             defaultValue="" // Set the default value to an empty string or any other default value
@@ -51,8 +46,7 @@ function CreateProduct({
             id="specifications"
             name="specifications"
             placeholder="Product Details"
-            value={formData.specifications}
-            onChange={handleChange}
+            required
             className="textarea textarea-bordered textarea-lg w-full "
           />
 
@@ -62,6 +56,9 @@ function CreateProduct({
             </div>
             <input
               type="file"
+              required
+              accept="image/*"
+              name="product_image"
               className="file-input file-input-bordered w-full max-w-xs"
             />
           </label>

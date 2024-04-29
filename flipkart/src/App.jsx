@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 
-//My Components
+// my
 import Footer from "./components/Footer.jsx";
 import Login from "./components/Login.jsx";
 import SignUp from "./components/SignUp.jsx";

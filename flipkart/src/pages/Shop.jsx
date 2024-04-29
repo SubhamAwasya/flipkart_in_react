@@ -1,42 +1,25 @@
 import React, { useState } from "react";
 
 // my
-import Product from "../components/Product.jsx";
-import { ProductCategory } from "../constant/Category.js";
 import CreateProduct from "../components/CreateProduct.jsx";
-import Grid from "../components/mini-comp/Grid.jsx";
 import RecivedOrders from "../components/mini-comp/shop-comp/RecivedOrders.jsx";
 import YourProducts from "../components/mini-comp/shop-comp/YourProducts.jsx";
 
 const Shop = () => {
   const [products, setProducts] = useState([]);
-  const [formData, setFormData] = useState({
-    name: "",
-    price: "",
-    category: "",
-    specifications: "",
-  });
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    console.log(e.target);
-    setFormData({ ...formData, [name]: value });
-  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setProducts([...products, formData]);
-    setFormData({ name: "", price: "", category: "", specifications: "" });
+    console.log(e.target.name.value);
+    console.log(e.target.price.value);
+    console.log(e.target.category.value);
+    console.log(e.target.specifications.value);
+    console.log(e.target.product_image.value);
   };
 
   return (
     <div className="p-4 md:mx-20">
-      <CreateProduct
-        handleChange={handleChange}
-        handleSubmit={handleSubmit}
-        formData={formData}
-        ProductCategory={ProductCategory}
-      />
+      <CreateProduct handleSubmit={handleSubmit} />
 
       <div role="tablist" className="tabs tabs-lifted tabs-lg mt-4">
         <input

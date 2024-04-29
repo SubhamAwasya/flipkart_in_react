@@ -8,7 +8,7 @@ function NavOptions() {
     useGlobalContext();
 
   return (
-    <div className="dropdown dropdown-end ">
+    <div className="dropdown dropdown-end z-20">
       <div
         tabIndex={0}
         role="button"

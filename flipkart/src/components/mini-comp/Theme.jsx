@@ -7,7 +7,6 @@ function Theme() {
     "light",
     "dark",
     "cyberpunk",
-    "valentine",
     "halloween",
     "forest",
     "fantasy",
@@ -17,7 +16,6 @@ function Theme() {
     "lemonade",
     "night",
     "coffee",
-    "dim",
     "nord",
     "sunset",
   ];

@@ -18,7 +18,6 @@ export default {
       "lemonade",
       "night",
       "coffee",
-      "dim",
       "nord",
       "sunset",
     ],
