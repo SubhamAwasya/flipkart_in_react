@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function CartBill() {
   return (
@@ -11,7 +12,9 @@ function CartBill() {
         <div> - Discount : -₹20</div>
         <div> - Delivery Charges : ₹40</div>
         <div className="font-bold"> - Total : ₹319</div>
-        <button className="btn btn-success">PLACE ORDER</button>
+        <Link to="/place-order" className="btn btn-success">
+          PLACE ORDER
+        </Link>
       </div>
     </div>
   );

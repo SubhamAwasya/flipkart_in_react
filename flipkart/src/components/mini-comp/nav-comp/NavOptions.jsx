@@ -7,6 +7,10 @@ function NavOptions() {
   const { setToggleLogin, setToggleSignup, setToggleCreateShop } =
     useGlobalContext();
 
+  function changeFocus(e) {
+    document.activeElement.blur();
+  }
+
   return (
     <div className="dropdown dropdown-end z-20">
       <div
@@ -17,14 +21,18 @@ function NavOptions() {
         <TiThMenu />
       </div>
       <ul
+        onClick={changeFocus}
         tabIndex={0}
-        className="mt-3 z-[1] p-2 gap-1 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
+        className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52"
       >
         <li>
           <Link to="/cart">Cart</Link>
         </li>
         <li>
-          <Link to="/shop">Shop</Link>
+          <Link to="/my-orders">My Orders</Link>
+        </li>
+        <li>
+          <Link to="/shop">My Shop</Link>
         </li>
         <li>
           <button onClick={() => setToggleLogin(true)}>Log In</button>

@@ -20,7 +20,6 @@ const Shop = () => {
   return (
     <div className="p-4 md:mx-20">
       <CreateProduct handleSubmit={handleSubmit} />
-
       <div role="tablist" className="tabs tabs-lifted tabs-lg mt-4">
         <input
           type="radio"
@@ -32,7 +31,7 @@ const Shop = () => {
         />
         <div
           role="tabpanel"
-          className="tab-content bg-base-100 border-base-300 rounded-box p-6"
+          className="tab-content bg-base-100 border-base-300 rounded-box "
         >
           <YourProducts />
         </div>
@@ -42,11 +41,11 @@ const Shop = () => {
           name="my_tabs_2"
           role="tab"
           className="tab"
-          aria-label="Orders"
+          aria-label="Recived Orders"
         />
         <div
           role="tabpanel"
-          className="tab-content bg-base-100 border-base-300 rounded-box p-6"
+          className="tab-content bg-base-100 border-base-300 rounded-box"
         >
           <RecivedOrders />
         </div>

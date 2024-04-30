@@ -14,6 +14,7 @@ import "./index.css";
 // icons
 import { GlobalContextProvider } from "./context/Context";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import PlaceOrder from "./pages/PlaceOrder.jsx";
 
 const router = createBrowserRouter([
   {
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
       {
         path: "/shop",
         element: <Shop />,
+      },
+      {
+        path: "/place-order",
+        element: <PlaceOrder />,
       },
     ],
   },

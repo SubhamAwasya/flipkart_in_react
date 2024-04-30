@@ -20,6 +20,10 @@ function Theme() {
     "sunset",
   ];
 
+  function changeFocus(e) {
+    document.activeElement.blur();
+  }
+
   return (
     <div className="dropdown dropdown-end z-40">
       <div tabIndex={0} role="button" className="btn btn-sm m-1 w-24">
@@ -35,6 +39,7 @@ function Theme() {
         </svg>
       </div>
       <ul
+        onClick={changeFocus}
         tabIndex={0}
         className="dropdown-content z-[1] p-2 shadow-2xl bg-base-300 rounded-box w-52"
       >

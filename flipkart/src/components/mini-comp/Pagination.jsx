@@ -4,7 +4,7 @@ const Pagination = () => {
   const [currentPage, setCurrentPage] = useState(1);
 
   return (
-    <div className="join w-full justify-center mb-5">
+    <div className="join w-full justify-center my-5 z-10">
       <button
         onClick={() => setCurrentPage(currentPage - 1)}
         disabled={currentPage === 1}
