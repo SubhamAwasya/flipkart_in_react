@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 
 // my
-import CreateProduct from "../components/CreateProduct.jsx";
 import RecivedOrders from "../components/mini-comp/shop-comp/RecivedOrders.jsx";
 import YourProducts from "../components/mini-comp/shop-comp/YourProducts.jsx";
+import CreateProduct from "../components/mini-comp/shop-comp/CreateProduct.jsx";
 
 const Shop = () => {
   const [products, setProducts] = useState([]);
@@ -19,14 +19,14 @@ const Shop = () => {
 
   return (
     <div className="p-4 md:mx-20">
-      <CreateProduct handleSubmit={handleSubmit} />
+      <CreateProduct />
       <div role="tablist" className="tabs tabs-lifted tabs-lg mt-4">
         <input
           type="radio"
           name="my_tabs_2"
           role="tab"
-          className="tab min-w-40"
-          aria-label="Your Products"
+          className="tab min-w-32 text-sm leading-4"
+          aria-label="My Products"
           defaultChecked
         />
         <div
@@ -40,7 +40,7 @@ const Shop = () => {
           type="radio"
           name="my_tabs_2"
           role="tab"
-          className="tab"
+          className="tab min-w-40 text-sm leading-4"
           aria-label="Recived Orders"
         />
         <div

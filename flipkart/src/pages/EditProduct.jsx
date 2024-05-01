@@ -1,13 +1,15 @@
-import { ProductCategory } from "../constant/Category.js";
+import React from "react";
+import { ProductCategory } from "../constant/Category";
 
-function CreateProduct({ handleSubmit }) {
+function EditProduct() {
+  function handleSubmit() {}
+
   return (
-    <div className="collapse bg-base-200">
-      <input type="checkbox" />
-      <div className="collapse-title text-xl font-medium">
-        + Add New Product
+    <div className="mx-4 md:mx-20">
+      <div className=" text-xl font-medium">
+        Edit : Enter detais you want to Update
       </div>
-      <div className="collapse-content">
+      <div className="">
         <form onSubmit={handleSubmit} className="flex flex-col gap-4 mb-6">
           <input
             type="text"
@@ -64,7 +66,7 @@ function CreateProduct({ handleSubmit }) {
           </label>
 
           <button type="submit" className="btn btn-neutral w-full">
-            Add Product
+            Update
           </button>
         </form>
       </div>
@@ -72,4 +74,4 @@ function CreateProduct({ handleSubmit }) {
   );
 }
 
-export default CreateProduct;
+export default EditProduct;

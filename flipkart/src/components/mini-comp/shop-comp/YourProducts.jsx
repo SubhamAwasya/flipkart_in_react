@@ -1,17 +1,16 @@
-import Product from "../../Product";
-import Grid from "../Grid";
+import ShopProduct from "./ShopProduct";
 
 function YourProducts() {
   return (
-    <Grid>
-      <Product />
-      <Product />
-      <Product />
-      <Product />
-      <Product />
-      <Product />
-      <Product />
-    </Grid>
+    <div className="m-4">
+      <ShopProduct />
+      <ShopProduct />
+      <ShopProduct />
+      <ShopProduct />
+      <ShopProduct />
+      <ShopProduct />
+      <ShopProduct />
+    </div>
   );
 }
 

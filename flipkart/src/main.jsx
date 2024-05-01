@@ -15,6 +15,7 @@ import "./index.css";
 import { GlobalContextProvider } from "./context/Context";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import PlaceOrder from "./pages/PlaceOrder.jsx";
+import EditProduct from "./pages/EditProduct.jsx";
 
 const router = createBrowserRouter([
   {
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
       {
         path: "/shop",
         element: <Shop />,
+      },
+      {
+        path: "/edit-product/:id",
+        element: <EditProduct />,
       },
       {
         path: "/place-order",
