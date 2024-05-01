@@ -9,6 +9,24 @@ export const GlobalContextProvider = ({ children }) => {
 
   // User -----------------------start-------------------------------------
   const [user, setUser] = useState(null);
+
+  function _Login(user) {
+    setUser(user);
+    localStorage.setItem("user", JSON.stringify(user));
+  }
+
+  function _LogOut(user) {
+    setUser(null);
+    localStorage.setItem("user", null);
+  }
+
+  useEffect(() => {
+    const localUser = localStorage.getItem("user");
+    if (localUser) {
+      setUser(JSON.parse(localUser));
+    }
+  }, []);
+
   // User -----------------------end---------------------------------------
 
   // Cart ----------------------start--------------------------------------
@@ -50,6 +68,8 @@ export const GlobalContextProvider = ({ children }) => {
         cart,
         setCart,
         user,
+        _Login,
+        _LogOut,
       }}
     >
       {children}

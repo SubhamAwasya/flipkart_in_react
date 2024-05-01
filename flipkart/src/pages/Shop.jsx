@@ -8,6 +8,7 @@ import CreateProduct from "../components/shop-comp/CreateProduct.jsx";
 // icons
 import { MdAddHome } from "react-icons/md";
 import useGlobalContext from "../context/Context.jsx";
+import { AiTwotoneShop } from "react-icons/ai";
 
 const Shop = () => {
   const [products, setProducts] = useState([]);
@@ -25,13 +26,12 @@ const Shop = () => {
     console.log(e.target.product_image.value);
   };
 
-  if (shop) {
+  if (!shop) {
     return (
       <div className="flex flex-col w-full mb-[20%] justify-center items-center">
-        <h1 className="text-3xl font-bold text-center mt-[20%]">
-          You have no shop !
-        </h1>
-
+        <AiTwotoneShop className="text-[200px] mt-20" />
+        <h1 className="text-3xl font-bold text-center">You have no shop !</h1>
+        <h1>Create shop to start selling your products.</h1>
         <div className="btn btn-success mt-4" onClick={setToggleCreateShop}>
           <MdAddHome className="mr-2 text-2xl" /> Create Shop
         </div>

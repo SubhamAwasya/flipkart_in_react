@@ -1,20 +1,51 @@
 import { useState } from "react";
+import axios from "axios";
 
 //icons
 import { GrClose } from "react-icons/gr";
 
 //my
 import useGlobalContext from "../context/Context";
+import { _ServerBaseUrl } from "../constant/ServerBaseUrl.js";
 
 function Login() {
-  const { setToggleLogin, setToggleSignup } = useGlobalContext();
+  const { setToggleLogin, setToggleSignup, _Login } = useGlobalContext();
   const [isLoading, setIsLoading] = useState(false);
-  const [infoText, setInfoText] = useState("error");
+  const [infoText, setInfoText] = useState("");
+
+  // making post request to create user
+  function handleSubmit(e) {
+    setIsLoading(true);
+    e.preventDefault();
+
+    axios
+      .post(
+        _ServerBaseUrl + "/api/auth/login",
+        {
+          email: e.target.email.value,
+          password: e.target.password.value,
+        },
+        { withCredentials: true }
+      )
+      .then((res) => {
+        console.log(res);
+        _Login(res.data.user);
+        setIsLoading(false);
+        setInfoText(res.data.message);
+        setToggleLogin(false);
+      })
+      .catch((err) => {
+        console.log(err);
+        setIsLoading(false);
+        setInfoText(err.response.data.message);
+      });
+  }
+
   return (
     <div className="w-full h-screen  fixed top-0 left-0 flex items-center justify-center z-50">
       <form
         className="w-[320px] flex flex-col items-center gap-1 bg-base-100 px-10 pb-10 rounded-xl "
-        onSubmit={() => {}}
+        onSubmit={handleSubmit}
       >
         <button
           className="relative w-6 h-6 left-[135px] top-[10px] flex justify-center items-center rounded-full border-2 border-transparent hover:border-2
