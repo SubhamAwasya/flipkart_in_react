@@ -15,7 +15,7 @@ const connect = () => {
   mongoose
     .connect(`${process.env.MONGODB_URI}`)
     .then(() => {
-      console.log("Connected to DB succifully !");
+      console.log("Connected to DB successfully !");
     })
     .catch((err) => {
       throw err;
@@ -24,10 +24,14 @@ const connect = () => {
 
 mongoose.set("strictQuery", false);
 
+const isLive = true;
+
 // middlewares;
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: isLive
+      ? "https://flipkart-in-react.vercel.app"
+      : "http://localhost:5173",
     credentials: true,
   })
 );
