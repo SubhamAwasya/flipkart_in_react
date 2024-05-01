@@ -29,7 +29,7 @@ function ShopProduct() {
           >
             Edit
           </button>
-          <button className="btn btn-error btn-sm">Delete</button>
+          <button className="btn btn-error btn-sm">Remove</button>
         </div>
       </div>
     </div>

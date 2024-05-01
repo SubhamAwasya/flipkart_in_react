@@ -16,6 +16,7 @@ import { GlobalContextProvider } from "./context/Context";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import PlaceOrder from "./pages/PlaceOrder.jsx";
 import EditProduct from "./pages/EditProduct.jsx";
+import MyOrders from "./pages/MyOrders.jsx";
 
 const router = createBrowserRouter([
   {
@@ -45,6 +46,10 @@ const router = createBrowserRouter([
       {
         path: "/place-order",
         element: <PlaceOrder />,
+      },
+      {
+        path: "/my-orders",
+        element: <MyOrders />,
       },
     ],
   },

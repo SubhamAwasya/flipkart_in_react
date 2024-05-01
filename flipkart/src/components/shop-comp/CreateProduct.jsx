@@ -1,4 +1,4 @@
-import { ProductCategory } from "../../../constant/Category.js";
+import { ProductCategory } from "../../constant/Category.js";
 
 function CreateProduct({ handleSubmit }) {
   return (

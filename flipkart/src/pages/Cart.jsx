@@ -1,5 +1,5 @@
-import CartBill from "../components/mini-comp/cart-comp/CartBill";
-import CartProduct from "../components/mini-comp/cart-comp/CartProduct";
+import CartBill from "../components/cart-comp/CartBill";
+import CartProduct from "../components/cart-comp/CartProduct";
 
 function Cart() {
   return (

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import Theme from "../Theme";
-import useGlobalContext from "../../../context/Context";
+import Theme from "../mini-comp/Theme.jsx";
+import useGlobalContext from "../../context/Context.jsx";
 
 // icons
 import { FaShoppingCart } from "react-icons/fa";
